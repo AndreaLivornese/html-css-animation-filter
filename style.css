@@ -68,6 +68,8 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+
+    transition: 0.3s;
 }
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
@@ -76,12 +78,13 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+
+    transition: 0.3s;
 }
 
 
 
 /* modifiche css esercizio */
-
 
 
 .ex-1-square:hover{
@@ -98,7 +101,7 @@
 
 .ex-3-square:hover{
     border-radius: 50%;
-
+    
 }
 
 
@@ -112,11 +115,11 @@
     0%{
         opacity: 1;
     }
-
+    
     50%{
         opacity:0;
     }
-
+    
     100%{
         opacity: 1;
     }
@@ -139,13 +142,28 @@
 }
 
 
-/* svolgere esercizio 7 */
+.ex-7-img{
+    animation: filter;
+    animation-duration: 2s;
+}
+
+
+@keyframes filter{
+    0%{
+        filter: invert(0) sepia(0); 
+    }
+
+    100%{
+        filter: invert(1) sepia(1);
+    }
+}
+
 
 
 
 .ex-8-img{
     border-radius: 30px;
-
+    
     filter: blur(2px) invert(1);
 }
 
@@ -153,10 +171,10 @@
 
 .ex-9-img{
     border-radius: 15px;
-
+    
     filter: brightness(.3) drop-shadow(10px 10px 20px black);
-
- transform: scale(150%);
+    
+    transform: scale(150%);
 }
 
 
@@ -171,11 +189,11 @@
     0%{
         transform: rotate(0deg);
     }
-
+    
     /* 50%{
         transform: rotate(360deg);
     } */
-
+    
     100%{
         transform: rotate(360deg);
     }
@@ -202,6 +220,91 @@
         transform: rotate(0deg);
     }
 }
+
+
+.ex-12-button:hover .ex-12-bottom-white{
+    
+    right:60%;
+}
+
+
+.ex-12-button:hover .ex-12-top-white{
+    
+    left:60%;
+}
+
+
+
+
+
+
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation-name:spin-bottom;
+    animation-duration:2s;
+    
+}
+
+
+@keyframes spin-bottom{
+    0%{
+        right:20%;
+        bottom:-10px;
+    }
+    20%{
+        right:80%;
+        bottom:-10px;
+    }
+    50%{
+        right:80%;
+        bottom:60px;
+    }
+    60%{
+        right:-10%;
+        bottom:60px;
+    }
+    80%{
+        right:-10%;
+        bottom:-10px;
+    }
+    100%{
+        right:20%;
+        bottom:-10px;
+    }
+}
+
+.ex-13-button:hover .ex-13-top-white{
+    animation-name:spin-top;
+    animation-duration:2s;
+}
+
+@keyframes spin-top{
+    0%{
+        left:10%;
+        top:-10px;
+    }
+    20%{
+        left:80%;
+        top:-10px;
+    }
+    50%{
+        left:80%;
+        bottoptom:60px;
+    }
+    60%{
+        left:-10%;
+        top:60px;
+    }
+    80%{
+        left:-10%;
+        top:-10px;
+    }
+    100%{
+        left:10%;
+        top:-10px;
+    }
+}
+
 
 
 /* fine modifiche css esercizio */
